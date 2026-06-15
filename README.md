@@ -1,24 +1,24 @@
-# Houdini Crowd Clip Importer
+# Importador de Clips para Multitudes en Houdini (Crowd Clip Importer)
 
-An interactive PySide tool to streamline loading, previewing, and importing FBX animation clips into Houdini Crowd Agent Definitions. Originally developed for Maya/Golaem workflows, now adapted and updated for Houdini.
+Una herramienta interactiva en PySide para agilizar la carga, previsualización e importación de clips de animación FBX en definiciones de agentes en Houdini. Desarrollado originalmente para flujos de trabajo de Maya/Golaem, ahora adaptado y actualizado para Houdini.
 
-## Features
+## Características
 
-- **Interactive PySide UI**: Card-based grid with 24 FPS hover playback loops for quick clip previsualization.
-- **Headless Preview Generator**: Spawns background `hython` subprocesses to render OpenGL sequences, keeping the main Houdini session fully responsive.
-- **Dynamic Locomotion Extractor**: Automatically resolves hips/pelvis joints to enforce locked, in-place animations at the origin.
-- **Automatic Camera Framing**: Dynamically computes agent geometry bounding boxes to frame previews at an optimal profile contrapicado angle.
-- **Non-Destructive Node Wiring**: Automatically creates and updates `agent` and `agentclip` SOP nodes downstream in your network.
+- **Interfaz Interactiva PySide**: Cuadrícula visual con reproducción en bucle a 24 FPS al pasar el cursor para previsualizar clips rápidamente.
+- **Generador de Previsualizaciones en Segundo Plano**: Lanza subprocesos de `hython` en segundo plano para renderizar secuencias OpenGL, manteniendo la sesión principal de Houdini completamente fluida.
+- **Extractor Dinámico de Locomoción**: Resuelve automáticamente las articulaciones de cadera/pelvis para fijar las animaciones en el sitio (*in-place*) en el origen.
+- **Encuadre de Cámara Automático**: Calcula dinámicamente las cajas delimitadoras de la geometría del agente para encuadrar las previsualizaciones en un ángulo contrapicado óptimo a 45 grados.
+- **Conexión de Nodos No Destructiva**: Crea y conecta de manera automática los nodos `agent` y `agentclip` SOP en tu red.
 
-## Installation & Setup
+## Instalación y Configuración
 
-1. Copy the python scripts (`crowd_clip_manager.py` and `render_clip_preview.py`) to your Houdini python path directory.
-2. In Houdini, create a new Shelf Tool and paste the following Python code to launch the UI:
+1. Copia los scripts de python (`crowd_clip_manager.py` y `render_clip_preview.py`) en la carpeta de scripts de tu ruta de Houdini.
+2. En Houdini, crea una nueva herramienta en tu estante (*Shelf Tool*) y pega el siguiente código en la pestaña de Script para lanzar la interfaz:
 
 ```python
 import sys
-# Replace with your local path to the scripts
-sys.path.append("C:/path/to/cloned/repository")
+# Reemplaza con la ruta local donde clonaste el repositorio
+sys.path.append("C:/ruta/al/repositorio/clonado")
 
 import crowd_clip_manager
 import importlib
@@ -27,7 +27,7 @@ importlib.reload(crowd_clip_manager)
 crowd_clip_manager.show_ui()
 ```
 
-## Requirements
+## Requisitos
 
 - **Houdini 20.5+**
-- Python 3 with PySide2 or PySide6
+- Python 3 con PySide2 o PySide6
