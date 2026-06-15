@@ -8,7 +8,6 @@ Una herramienta hecha en PySide para agilizar la carga, previsualización e impo
 - **Generador de Previsualizaciones en Segundo Plano**: Lanza subprocesos de `hython` en segundo plano para renderizar secuencias OpenGL, manteniendo la sesión principal de Houdini completamente fluida.
 - **Extractor Dinámico de Locomoción**: Resuelve automáticamente las articulaciones de cadera/pelvis para fijar las animaciones en el sitio (*in-place*) en el origen.
 - **Encuadre de Cámara Automático**: Calcula dinámicamente las cajas delimitadoras de la geometría del agente para encuadrar las previsualizaciones en un ángulo contrapicado óptimo a 45 grados.
-- **Conexión de Nodos No Destructiva**: Crea y conecta de manera automática los nodos `agent` y `agentclip` SOP en tu red.
 
 ## Instalación y Configuración
 
