@@ -1,6 +1,6 @@
-# Importador de Clips para Multitudes en Houdini (Crowd Clip Importer)
+# Crowd Clip Importer
 
-Una herramienta interactiva en PySide para agilizar la carga, previsualización e importación de clips de animación FBX en definiciones de agentes en Houdini. Desarrollado originalmente para flujos de trabajo de Maya/Golaem, ahora adaptado y actualizado para Houdini.
+Una herramienta hecha en PySide para agilizar la carga, previsualización e importación de clips de animación FBX en definiciones de agentes en Houdini. Desarrollado originalmente para Maya/Golaem, ahora adaptado y actualizado para Houdini.
 
 ## Características
 
@@ -29,5 +29,4 @@ crowd_clip_manager.show_ui()
 
 ## Requisitos
 
-- **Houdini 20.5+**
 - Python 3 con PySide2 o PySide6
